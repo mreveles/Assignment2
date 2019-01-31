@@ -1,0 +1,49 @@
+@model Assignment2.Models.Client
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Client</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CoName" class="control-label"></label>
+                <input asp-for="CoName" class="form-control" />
+                <span asp-validation-for="CoName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoPhone" class="control-label"></label>
+                <input asp-for="CoPhone" class="form-control" />
+                <span asp-validation-for="CoPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Liaison" class="control-label"></label>
+                <input asp-for="Liaison" class="form-control" />
+                <span asp-validation-for="Liaison" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LiaisonPhone" class="control-label"></label>
+                <input asp-for="LiaisonPhone" class="form-control" />
+                <span asp-validation-for="LiaisonPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

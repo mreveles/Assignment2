@@ -1,0 +1,45 @@
+@model Assignment2.Models.Client
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CoName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CoName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CoPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CoPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Liaison)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Liaison)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LiaisonPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LiaisonPhone)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

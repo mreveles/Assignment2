@@ -1,0 +1,42 @@
+@model Assignment2.Models.Client
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CoName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CoName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CoPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CoPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Liaison)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Liaison)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LiaisonPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LiaisonPhone)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
